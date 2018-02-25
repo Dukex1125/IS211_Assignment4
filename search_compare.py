@@ -168,11 +168,13 @@ def binary_search_recursive(my_list, item, list_size):
         else:
             return binary_search_recursive(new_list[midpoint + 1:], item, midpoint)
 
-for i in range(100):
-    for list_size in (500, 1000, 10000):
-        print sequential_search(my_list, -1, list_size)
-        print ordered_sequential_search(my_list, -1, list_size)
-        print binary_search_iterative(my_list, -1, list_size)
-        print binary_search_recursive(my_list, -1, list_size)
+if __name__ == '__main__':
 
-        my_list = []
+    for i in range(100):
+        for list_size in (500, 1000, 10000):
+            print sequential_search(my_list, -1, list_size)
+            print ordered_sequential_search(my_list, -1, list_size)
+            print binary_search_iterative(my_list, -1, list_size)
+            print binary_search_recursive(my_list, -1, list_size)
+
+            my_list = []
